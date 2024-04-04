@@ -22,3 +22,18 @@ if (typeof contentScriptHasRun === 'undefined') {
 else {
   console.log('content-script: sub-emoji.js already run');
 }
+
+"host_permissions": [
+  "<all_urls>"
+],
+"permissions": [
+  "scripting",
+  "storage",
+  "activeTab",
+  "webNavigation"
+]
+
+"default_icon": {
+"16": "icons/icon-off.png",
+"32": "icons/icon-off.png"
+}

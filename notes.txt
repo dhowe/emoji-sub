@@ -1,0 +1,24 @@
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+  "content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": [
+      "./sub-emoji.js"
+    ]
+  }
+],
+
+// run-only-once
+if (typeof contentScriptHasRun === 'undefined') {
+  var contentScriptHasRun = true; // only run once
+}
+else {
+  console.log('content-script: sub-emoji.js already run');
+}
